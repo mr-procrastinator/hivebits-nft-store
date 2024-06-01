@@ -38,7 +38,7 @@ function App() {
                 universalLink: "https://link.safepal.io/ton-connect",
                 jsBridgeKey: "safepalwallet",
                 bridgeUrl: "https://ton-bridge.safepal.com/tonbridge/v1/bridge",
-                platforms: ["ios", "android", "chrome", "firefox"]
+                platforms: ["chrome", "android", "ios", "firefox", "macos", "windows", "linux"]
               },
               {
                 appName: "tonwallet",
@@ -48,7 +48,7 @@ function App() {
                 universalLink: "https://wallet.ton.org/ton-connect",
                 jsBridgeKey: "tonwallet",
                 bridgeUrl: "https://bridge.tonapi.io/bridge",
-                platforms: ["chrome", "android", "ios"]
+                platforms: ["chrome", "android", "ios", "firefox", "macos", "windows", "linux"]
               }
             ]
           }}

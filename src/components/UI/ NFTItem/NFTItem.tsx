@@ -47,9 +47,8 @@ export const NFTItem:React.FC<NFTItemProps> = ({ url, address, ownerAddress}) =>
   const [isPurchased, setIsPurchased] = useState(false);
   
   useEffect(() => {
-    // Логика для проверки, куплен ли товар пользователем
+
     const checkIfPurchased = async () => {
-      // Предположим, что у вас есть функция, которая проверяет статус покупки
       console.log(tonConnectUi.account?.address + " account address " + ownerAddress + " owner address" )
       console.log(tonConnectUi.account?.address.toLowerCase() == ownerAddress.toLowerCase())
       const purchased = tonConnectUi.account?.address.toLowerCase() == ownerAddress.toLowerCase(); //await checkPurchaseStatus(item.id);
@@ -58,6 +57,7 @@ export const NFTItem:React.FC<NFTItemProps> = ({ url, address, ownerAddress}) =>
 
     checkIfPurchased();
   }, [item, wallet]);
+    
 
   const handleBuyNowClick = (item: NFTItemDescriptionDto) => {
     defaultTx.messages[0].address = ownerAddress;
@@ -78,6 +78,7 @@ export const NFTItem:React.FC<NFTItemProps> = ({ url, address, ownerAddress}) =>
           setError(res)
         }
       })
+    
   }, [])
 
   return <div className="nft-item">
