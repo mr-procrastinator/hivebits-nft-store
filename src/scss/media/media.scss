@@ -1,0 +1,28 @@
+@use 'sass:list';
+
+@import 'functions';
+
+@mixin media($args...) {
+  $min: get_breakpoint(list.nth($args, 1));
+  $max: null;
+  @if(list.length($args) > 1) {
+    $max: get_breakpoint(list.nth($args, 2));
+  }
+  $orientationDev: null;
+  @if(list.length($args) > 2) {
+    $orientationDev: map-get($map: $media-expressions, $key: list.nth($args, 3));
+  }
+  $minPart: "(min-width: #{$min})";
+  $maxPart: "";
+  $orientationPart: "";
+  @if($max) {
+    $maxPart: " and (max-width: #{$max})"
+  }
+  @if($orientationDev) {
+    $orientationPart: " and #{$orintationDev}"
+  }
+  $query: $minPart + $maxPart + $orientationDev;
+  @media screen and #{$query} {
+    @content
+  }
+}

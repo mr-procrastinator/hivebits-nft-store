@@ -1,0 +1,19 @@
+@use 'sass:list';
+
+@import 'breakpoints';
+
+@function get_breakpoint($value) {
+  $breakpoint: map-get($map: $breakpoints, $key: $value);
+  @if(not $breakpoint) {
+    $breakpoint: $value;
+    @if(not str-index($string: "#{$breakpoint}", $substring: "px")) {
+      $breakpoint: '#{$breakpoint}px';
+    } @else if(type-of($value: $value) == number) {
+      $breakpoint: $breakpoint;
+    } @else {
+        @error 'Не указано значение для `#{$breakpoint}`. '
+       + 'Пожалуйста, убедитесь, что точка останова объявлена в карте `$breakpoints`.';
+    }
+  }
+  @return $breakpoint;
+}

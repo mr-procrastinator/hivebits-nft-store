@@ -1,0 +1,17 @@
+@import "../../scss/media/media.scss";
+
+.collection {
+  padding: 40px var(--global_horizontal_side) var(--page_m) var(--global_horizontal_side);
+}
+
+.collection-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+
+  @include media('md') {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+}

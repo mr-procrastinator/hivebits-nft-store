@@ -1,0 +1,51 @@
+.app-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.25;
+  border-radius: var(--radius_button);
+  // height: var(--height_button);
+  @media(min-width:1000px) {
+    height: var(--height_button);
+  }
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &_icon {
+    border: none;
+    background-color: transparent;
+    width: var(--height_button);
+
+    &:hover {
+      background-color: var(--background_hover_alpha);
+    }
+  }
+
+  &_primary {
+    border: none;
+    color: var(--button_primary_foreground);
+    background-color: var(--button_primary_background);
+    height: var(--height_button);
+
+    &:hover:not(:disabled) {
+      background-color: var(--button_primary_background_hover);
+    }
+
+    &:disabled {
+      color: var(--foreground_primary);
+      background-color: var(--button_secondary_background);
+    }
+  }
+}
+.app-button.purchased {
+  background-color: green; /* цвет фона для кнопки "Куплено" */
+  color: white; /* цвет текста */
+  cursor: default; /* курсор */
+}
+
+.app-button.purchased:hover {
+  background-color: green; /* цвет фона для кнопки "Куплено" */
+}

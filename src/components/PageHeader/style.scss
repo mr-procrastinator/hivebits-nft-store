@@ -1,0 +1,32 @@
+@import "../../scss/media/media.scss";
+
+.page-header {
+  box-sizing: border-box;
+  height: 200px;
+
+  @include media('md') {
+    padding: 0 var(--global_horizontal_large_card);
+    height: 240px;
+  }
+
+  &__wrapper {
+    overflow: hidden;
+    isolation: isolate;
+    height: 100%;
+
+    @include media('md') {
+      border-radius: var(--radius_cards_xlarge);
+      height: inherit;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    transform: scale(1.2);
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    filter: blur(10px);
+    background-clip: border-box;
+  }
+}

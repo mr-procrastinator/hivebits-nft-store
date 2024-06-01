@@ -1,0 +1,77 @@
+.nft-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+
+  h3 {
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: 400;
+    overflow: hidden;
+    max-width: 100%;
+    min-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  &__card {
+    box-sizing: border-box;
+    background-color: var(--background_tint_card);
+    border-radius: var(--radius_cards_medium);
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: var(--radius_cards_medium)  var(--radius_cards_medium) 0 0;
+    aspect-ratio: 1;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      object-fit: cover;
+      width: inherit;
+      height: 100%;
+      transition: scale .3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        scale: 1.2;
+      }
+    }
+  }
+
+  &__error-message {
+    font-size: 13px;
+    color: var(--foreground_subhead);
+  }
+
+  &__card-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .app-button_primary {
+    width: 100%;
+    font-weight: 600;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+}
