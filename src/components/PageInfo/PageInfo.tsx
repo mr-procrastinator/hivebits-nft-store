@@ -3,6 +3,8 @@ import { TonDAppApi } from "../../TonDAppApi";
 import { CollectionDetailsDto, NFTCollectionDto } from "../../server/dto/collection-dto";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import TgIcon from "../../assets/tg-icon.svg";
+import BgLogo from "../../assets/cover.png";
+import BgBee from "../../assets/bee.jpg";
 import CopiIcon from "../../assets/copy.svg";
 import { PageHeading } from "../PageHeader/PageHeader";
 import { Button, ButtonVariant } from "../UI/Button/Button";
@@ -39,7 +41,7 @@ export const PageInfo = () => {
   }, [collection])
 
   return <>
-    <PageHeading image={details ? TonDAppApi.formatIpfsUri(details.image) : ''} />
+    <PageHeading image={details ? BgLogo : ''} />
     <div className="page-info">
       {details &&
         <>
@@ -47,7 +49,7 @@ export const PageInfo = () => {
             <div 
               className="page-info__avatar"
               style={{
-                backgroundImage: `url(${TonDAppApi.formatIpfsUri(details.image)})`
+                backgroundImage: `url(${BgBee})`
               }}
             ></div>
           </div>
@@ -58,21 +60,8 @@ export const PageInfo = () => {
       {collection &&
       <div className="page-info__ellipses-wrapper">
         <div className="page-info__ellipses">
-          <span>Адрес:{" "}</span>
-          <a className="ellipseMe">
-            {formatHash(collection.address)}
-          </a>
-          <CopyToClipboard text={collection.address}
-            onCopy={() => { console.log('copied!') }}>
-            <Button variant={ButtonVariant.Icon}>
-              <CopiIcon/>
-            </Button>
-          </CopyToClipboard>
-        </div>
-        <div className="page-info__ellipses">
-          <span>Создано:{" "}</span>
-          <a className="ellipseMe">
-            {formatHash(collection.data_hash)}
+        <a className="ellipseMe" href="https://dapp-stg.hivebits.io/dashboard" target="_blank" rel="noopener noreferrer">
+            Main Portal Page
           </a>
         </div>
       </div>

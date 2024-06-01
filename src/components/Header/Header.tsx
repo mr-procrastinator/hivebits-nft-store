@@ -5,7 +5,7 @@ import './header.scss';
 export const Header = () => {
     return <header>
         <Logo />
-        <span>TON DApp demo</span>
+        <span>Hive Bits</span>
         <TonConnectButton />
     </header>
 }
