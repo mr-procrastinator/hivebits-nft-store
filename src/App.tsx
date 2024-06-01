@@ -48,12 +48,12 @@ function App() {
                 universalLink: "https://wallet.ton.org/ton-connect",
                 jsBridgeKey: "tonwallet",
                 bridgeUrl: "https://bridge.tonapi.io/bridge",
-                platforms: ["chrome", "android"]
+                platforms: ["chrome", "android", "ios"]
               }
             ]
           }}
           actionsConfiguration={{
-              twaReturnUrl: 'https://t.me/DemoDappWithTonConnectBot/demo'
+              twaReturnUrl: 'https://t.me/hivebitstest_bot/hivesbitstore'
           }}
       >
         <div className="app">
