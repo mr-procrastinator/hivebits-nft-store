@@ -16,7 +16,7 @@ export default defineConfig({
     outDir: 'build'
   },
   // @ts-ignore
-  base: process.env.GH_PAGES ? '/demo-dapp-with-react-ui/' : './',
+  base: process.env.GH_PAGES ? '/hivebits-nft-store/' : './',
   server: {
     // host: '0.0.0.0', // This allows access from your local network
     // port: 3000,      // Specify the port you want to use
