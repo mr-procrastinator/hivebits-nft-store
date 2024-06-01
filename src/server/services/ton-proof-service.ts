@@ -112,7 +112,7 @@ export class TonProofService {
       return sign.detached.verify(result, message.signature, publicKey);
     } catch (e) {
       return false;
-    }
+    } 
   }
 
 }
