@@ -5,8 +5,8 @@ HiveBits is an RWA protocol which enables individuals and companies to engage in
 The project allows to tokenize beehives and mint an NFT on TON blockchain, connected to each beehive.
 NFT owner can:
 
-	1) get access to bee farm and api therapy center
-	2) get a share in bee hive products: honey, propolis, etc...
+1) get access to bee farm and api therapy center
+2) get a share in bee hive products: honey, propolis, etc...
 
 ## How it works 
 
@@ -31,4 +31,5 @@ npm run dev
 ```
 
 The project was built during The Open League Hackathon by TON
-Project Page Link: https://dorahacks.io/buidl/12989
+
+Project's page Link: https://dorahacks.io/buidl/12989
